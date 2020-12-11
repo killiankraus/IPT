@@ -5,7 +5,9 @@
 }
 @Scripts.Render("~/bundles/Login")
 @Scripts.Render("~/Content/logincss")
+@Scripts.Render("~/bundles/modernizr")
 
+@Html.Partial("_ajaxLoader")
 
 <head>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -13,8 +15,6 @@
 </head>
 
 <body>
-
-asdfasdfasdf
     <!------ Include the above in your HEAD tag ---------->
     <!--
         you can substitue the span of reauth email for a input with the email and
