@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace SIA.Models.DTO
 {
@@ -20,8 +21,10 @@ namespace SIA.Models.DTO
 
         //[Required(AllowEmptyStrings = false, ErrorMessage = "Please Provide Eamil")]
         //[RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "Please Provide Valid Email")]
+        
         public string EmailAddress { get; set; }
         public string AddressLines { get; set; }
+        //[Remote("checkUserName", "Account", ErrorMessage = "UserName already exists!")]
         public string Username { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }

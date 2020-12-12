@@ -32,7 +32,8 @@
                         window.location.href = "../DataTable/DataTables";
                     }
                     else {
-                        swal("Error!", "Incorrect Username or Password", "Try Again");
+                        swal("Error!", "Username or Password is Incorrect", "error");
+                        $("#password").val("");
                     }
                 },
                 error: function (res) {

@@ -168,7 +168,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap3.min.css" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\registration.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -308,6 +310,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\_ajaxLoader.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
     <None Include="Views\Home\_ajaxLoader.cshtml" />
     <Content Include="Scripts\sweetalert.min.js" />
     <Content Include="Web.config" />

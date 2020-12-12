@@ -32,11 +32,15 @@ namespace SIA
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/bootstrap.css"));
 
             bundles.Add(new ScriptBundle("~/Content/logincss").Include(
-                        "~/Content/login.css"));
+                        "~/Content/bootstrap.css",
+                      "~/Content/login.css"));
+            bundles.Add(new ScriptBundle("~/Content/registrationcss").Include(
+                        "~/Content/bootstrap.css",
+                      "~/Content/registration.css"));
+
         }
     }
 }

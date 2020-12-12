@@ -21,23 +21,6 @@ namespace SIA.Models.Repository
         {
 
             Registration reg = new Registration();
-            
-            //registrationFormDTO.RegistrationID
-        
-
-            //reg.FirstName = registrationFormDTO.FirstName;
-            //reg.MiddleName = registrationFormDTO.MiddleName;
-            //reg.LastName = registrationFormDTO.LastName;
-            //reg.EmailAddress = registrationFormDTO.EmailAddress;
-            //reg.AddressLines = registrationFormDTO.AddressLines;
-            //reg.Username = registrationFormDTO.Username;
-            //reg.Password = registrationFormDTO.Password;
-            //reg.Contact = registrationFormDTO.Contact;
-            //reg.Birthdate = registrationFormDTO.Birthdate;
-
-
-            //db.Registrations.Add(reg);
-            //db.SaveChanges();
 
             reg.FirstName = registrationFormDTO.FirstName;
             reg.MiddleName = registrationFormDTO.MiddleName;
