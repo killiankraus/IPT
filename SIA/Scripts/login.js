@@ -27,11 +27,13 @@
                 contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
                 success: function (res) {
                     if (res =="True") {
-                        swal("Nice!", "Information Added", "success");
+                        swal("Nice!", "Successfully Log-in", "success");
+
                         window.location.href = "../DataTable/DataTables";
                     }
                     else {
-                        swal("Error!", "Incorrect Username or Password", "Try Again");
+                        swal("Error!", "Username or Password is Incorrect", "error");
+                        $("#password").val("");
                     }
                 },
                 error: function (res) {

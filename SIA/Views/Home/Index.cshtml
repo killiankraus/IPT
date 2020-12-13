@@ -4,126 +4,104 @@
     Layout = null;
 }
 
-@Styles.Render("~/Content/css")
+@*@Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/modernizr")
+    @Html.Partial("_ajaxLoader")*@
+
 @Styles.Render("~/bundles/modernizr")
+@Styles.Render("~/Content/registrationcss")
+
 @Html.Partial("_ajaxLoader")
 
 
+<div class="container">
+    <div class="card card-container">
 
-    <div class="container">
-        <form action="/Home/dataTransfer" method="post" id="registrationForm">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
 
-            <fieldset>
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" action="/Home/dataTransfer"  method="post" id="registrationForm">
+                <fieldset>
 
-                <center><h2><b>Registration Form</b></h2></center><br>
+                    <center><h2><b>Registration Form</b></h2></center><br>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label">First Name</label>
-                    <div class="input-group">
-                        <input id="FirstName" name="FirstName" placeholder="First Name" class="form-control" type="text">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Middle Name</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="MiddleName" name="MiddleName" placeholder="Middle Name" class="form-control" type="text">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="input-group">
+                            <input id="FirstName" name="FirstName" placeholder="First Name" class="form-control" type="text">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Last Name</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="LastName" name="LastName" placeholder="Last Name" class="form-control" type="text">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Middle Name</label>
+                        <div class="input-group">
+                            <input id="MiddleName" name="MiddleName" placeholder="Middle Name" class="form-control" type="text">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Birth Date</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="Birthdate" name="Birthdate" class="form-control" type="date">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="input-group">
+                            <input id="LastName" name="LastName" placeholder="Last Name" class="form-control" type="text">
+                        </div>
                     </div>
 
-                </div>
-
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">E-Mail</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        <input id="EmailAddress" name="EmailAddress" placeholder="E-Mail Address" class="form-control" type="text">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Birth Date</label>
+                        <div class="input-group">
+                            <input id="Birthdate" name="Birthdate" class="form-control" type="date">
+                        </div>
                     </div>
 
-                </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Address</label>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">E-Mail</label>
 
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                        <input id="AddressLines" name="AddressLines" placeholder="Address" class="form-control" type="text">
+                        <div class="input-group">
+                            <input id="EmailAddress" name="EmailAddress" placeholder="E-Mail Address" class="form-control" type="text">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Contact No</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="Contact" name="Contact" placeholder="09__+____+___" class="form-control" onkeyup="numberCheck(this)" type="text" maxlength="11" min="8"><span id="errmsg"></span>
-
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Address</label>
+                        <div class="input-group">
+                            <input id="AddressLines" name="AddressLines" placeholder="Address" class="form-control" type="text">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Username</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="Username" name="Username" placeholder="Username" type="text" class="form-control">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Contact No</label>
+                        <div class="input-group">
+                            <input id="Contact" name="Contact" placeholder="09__+____+___" class="form-control" onkeyup="numberCheck(this)" type="text" maxlength="11" min="8"><span id="errmsg"></span>
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Password</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input name="Password" id="Password" placeholder="Password" type="password" class="form-control">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Username</label>
+                        <div class="input-group">
+                            <input id="Username" name="Username" placeholder="Username" type="text" class="form-control">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Confirm Password</label>
-
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input name="ConfirmPassword" id="ConfirmPassword" type="password" placeholder="" class="form-control">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Password</label>
+                        <div class="input-group">
+                            <input name="Password" id="Password" placeholder="Password" type="password" class="form-control">
+                        </div>
                     </div>
 
-                </div>
-                <button type="submit" id="registerBtn" class="btn btn-warning">SUBMIT<span class="glyphicon glyphicon-send"></span></button>
-                @*<div class = "form-group" > <input type = "submit" value = "Submit" class = "btn-success"/> </div>
-                    }*@
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Confirm Password</label>
+                        <div class="input-group">
+                            <input name="ConfirmPassword" id="ConfirmPassword" type="password" placeholder="" class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" id="registerBtn" class="btn btn-warning">Sign-Up</button>
 
-            </fieldset>
-        </form>
-
-    </div>
-
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+                </fieldset>
+            </form>
+    </div><!-- /card-container -->
+</div><!-- /container -->
+@*@Scripts.Render("~/bundles/jquery")*@
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jquery")

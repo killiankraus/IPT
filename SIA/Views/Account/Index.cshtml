@@ -1,11 +1,11 @@
 ﻿
-@{
+<!--@{
     ViewBag.Title = "Login";
     Layout = null;
 }
 
 @Styles.Render("~/bundles/modernizr")
-@Styles.Render("~/Content/logincss")
+@Styles.Render("~/Content/css")
 
 @Html.Partial("_ajaxLoader")
 
@@ -14,16 +14,13 @@
 <div class="container">
     <div class="card card-container">
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-        
-
         <p id="profile-name" class="profile-name-card"></p>
-        <h1> Testing for the github </h1>
 
         <form class="form-signin" action="/Account/loginChecker" method="post" id="registrationForm">
 
             <span id="reauth-email" class="reauth-email"></span>
             <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            <input type="password" id="Password" name="password" class="form-control" placeholder="Password" required>
 
             <div id="remember" class="checkbox">
                 <label>
@@ -44,10 +41,10 @@
                 </div>
 
             </div>
-        </form><!-- /form -->
+        </form>--><!-- /form -->
 
-    </div><!-- /card-container -->
-</div><!-- /container -->
+    <!--</div>--><!-- /card-container -->
+<!--</div>--><!-- /container -->
 
 
-@Scripts.Render("~/bundles/Login")
+<!--@Scripts.Render("~/bundles/Login")-->

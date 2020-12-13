@@ -15,35 +15,35 @@ $(document).ready(function () {
 
     $("#registrationForm").validate({
         rules: {
-            //FirstName: {
-            //    required: true,
-            //    minlength: 2
-            //},
-            //LastName: {
-            //    required: true,
-            //    minlength: 2
-            //},
-            //Birthdate: {
-            //    required: true
-            //},
-            //Contact: {
-            //    required: true,
-            //    digits: true,
-            //    minlength: 10
-            //},
-            //EmailAddress: {
-            //    required: true,
-            //    email: true,
-            //    minlength: 10
-            //},
-            //AddressLines: {
-            //    required: true,
-            //    minlength: 2
-            //},
+            FirstName: {
+                required: true,
+                minlength: 2
+            },
+            LastName: {
+                required: true,
+                minlength: 2
+            },
+            Birthdate: {
+                required: true
+            },
+            Contact: {
+                required: true,
+                digits: true,
+                minlength: 10
+            },
+            EmailAddress: {
+                required: true,
+                email: true,
+                minlength: 10
+            },
+            AddressLines: {
+                required: true,
+                minlength: 2
+            },
             Username: {
                 required: true,
                 minlength: 8,
-                //remote: "../Models/Checking/check.cs/checkUserName"
+                remote: "../Home/checkUserName"
             },
             Password: {
                 required: true,
@@ -57,35 +57,36 @@ $(document).ready(function () {
             }
         },
         messages: {
-            //FirstName: {
-            //    required: "Please provide your First Name",
-            //    minlength: "Name is too Short"
-            //},
-            //LastName: {
-            //    required: "Please provide your Last Name",
-            //    minlength: "LastName is too Short"
-            //},
-            //Contact: {
-            //    required: "Please provide your Cellphone Number",
-            //    digits: "Please provide numbers only!",
-            //    minlength: "Contact Number is too Short"
-            //},
-            //Birthdate: {
-            //    required: true,
-            //    required: "PLease Enter your Date of Birth"
-            //},
-            //EmailAddress: {
-            //    required: "Please provide your Email Address",
-            //    email: "Please provide a valid Email Address",
-            //    minlength: "Make sure to have a good Email"
-            //},
-            //AddressLines: {
-            //    required: "Please provide your Home Address",
-            //    minlength: "Address is too Short"
-            //},
+            FirstName: {
+                required: "Please provide your First Name",
+                minlength: "Name is too Short"
+            },
+            LastName: {
+                required: "Please provide your Last Name",
+                minlength: "LastName is too Short"
+            },
+            Contact: {
+                required: "Please provide your Cellphone Number",
+                digits: "Please provide numbers only!",
+                minlength: "Contact Number is too Short"
+            },
+            Birthdate: {
+                required: true,
+                required: "PLease Enter your Date of Birth"
+            },
+            EmailAddress: {
+                required: "Please provide your Email Address",
+                email: "Please provide a valid Email Address",
+                minlength: "Make sure to have a good Email"
+            },
+            AddressLines: {
+                required: "Please provide your Home Address",
+                minlength: "Address is too Short"
+            },
             Username: {
                 required: "Please provide your UserName",
-                minlength: "Username is too Short"
+                minlength: "Username is too Short",
+                remote: "Username is already taken"
             },
             Password: {
                 required: "Please provide password",
@@ -113,7 +114,7 @@ $(document).ready(function () {
                         window.location.href = "../Account/Login";
                     }
                     else {
-
+                        swal("Error!", "Username or Password is Incorrect", "error");
                     }
                 },
                 error: function (res) {
